@@ -1,6 +1,6 @@
 {
   "name": "pika-go",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A scaffolding tool provide react-ts & node-koa-server-ts project setup",
   "main": "dist/index.js",
   "bin": {
