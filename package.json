@@ -1,5 +1,5 @@
 {
-  "name": "pika-cli",
+  "name": "pika-go",
   "version": "1.0.0",
   "description": "A scaffolding tool provide react-ts & node-koa-server-ts project setup",
   "main": "dist/index.js",
