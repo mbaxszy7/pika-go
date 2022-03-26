@@ -4,8 +4,8 @@ My personal scaffolding tool
 
 Usage:
 
-pika-go create ---create a project
-pika-go help -----show help
+- pika-go create ---create a project
+- pika-go help -----show help
 
 ## react-ts scaffolding
 
