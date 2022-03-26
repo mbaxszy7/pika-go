@@ -1,5 +1,5 @@
 import { execSync } from "child_process"
-import chalk from "chalk"
+// import chalk from "chalk"
 
 const execCmd = async (cmd: string, dir: string) => {
   return new Promise((resolve) => {

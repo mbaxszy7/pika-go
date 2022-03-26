@@ -7,9 +7,9 @@
     "pika-go": "./dist/index.js"
   },
   "lint-staged": {
-    "*.{ts}": [
-      "prettier --write src/",
-      "eslint --fix --cache"
+    "src/**/*.ts": [
+      "prettier --write",
+      "eslint --fix --max-warnings 0"
     ]
   },
   "config": {
