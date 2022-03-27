@@ -6,6 +6,7 @@ Usage:
 
 - pika-go create ---create a project
 - pika-go help -----show help
+- pika-go dev [name] ---open VSCode & start dev server
 
 ## react-ts scaffolding
 

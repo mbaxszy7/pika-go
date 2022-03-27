@@ -5,6 +5,12 @@ import { Project } from "./Project"
 import execCmd from "./exec"
 
 class ProjectCreator {
+  private project?: Project
+
+  public getProject(): Project | undefined {
+    return this.project
+  }
+
   public async create() {
     const result = await inquirer.prompt<{ name: string; type: string }>([
       {
@@ -22,13 +28,11 @@ class ProjectCreator {
     ])
 
     const project = new Project(result.type, result.name)
-    return {
-      emitPath: this.createProjectFromTemplate(project),
-      name: result.name,
-    }
+    this.createProjectFromTemplate(project)
+    this.project = project
   }
 
-  createProjectFromTemplate(project: Project): string {
+  createProjectFromTemplate(project: Project) {
     const templateDir = path.resolve(
       __dirname,
       "../templates",
@@ -43,8 +47,6 @@ class ProjectCreator {
     this.recursiveCopy(templateDir, to, {
       PROJECT_NAME: project.getName(),
     })
-
-    return to
   }
 
   private recursiveCopy(
@@ -91,6 +93,11 @@ class ProjectCreator {
 
   async openVScode(name: string) {
     await execCmd(`code ./${name}`, process.cwd())
+  }
+
+  async runDev(name: string) {
+    process.chdir(path.resolve(process.cwd(), name))
+    await execCmd(`npm run dev`, process.cwd())
   }
 }
 

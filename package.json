@@ -1,13 +1,13 @@
 {
   "name": "pika-go",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A scaffolding tool provide react-ts & node-koa-server-ts project setup",
   "main": "dist/index.js",
   "bin": {
     "pika-go": "./dist/index.js"
   },
   "lint-staged": {
-    "src/**/*.ts": [
+    "**/*.ts": [
       "prettier --write",
       "eslint --fix --max-warnings 0"
     ]
