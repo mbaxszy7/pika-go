@@ -1,6 +1,6 @@
 # pika-go
 
-My personal scaffolding tool
+A scaffolding tool provide react-ts & node-koa-server-ts project setup
 
 Usage:
 
